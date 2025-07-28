@@ -16,7 +16,7 @@ export default function LayoutWrapper({ children }) {
     <>
       {!shouldHide && <Header />}
       {children}
-      {!shouldHide && <Footer />}
+       <Footer />
 
     </>
   );

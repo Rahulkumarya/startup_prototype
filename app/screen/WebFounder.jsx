@@ -173,7 +173,7 @@ const founders = Founders;
               {/* Price & Book Button */}
               <div className="flex justify-between items-center mt-2">
                 <span className="font-bold text-green-600">
-                  ${founder.price}/hr
+                  Rs: {founder.price}/hr
                 </span>
                 <button className="border border-green-600 text-green-600 px-4 py-1 rounded-md hover:bg-green-100 transition">
                   Book

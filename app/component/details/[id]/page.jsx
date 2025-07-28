@@ -57,7 +57,7 @@ export default function FounderDetails() {
                 Exp: {selectedFounder.experience} Years
               </p>
               <p className="text-2xl font-bold text-green-600 mt-4">
-                ${price}/hr
+                Rs{price}/hr
               </p>
             </div>
           </div>

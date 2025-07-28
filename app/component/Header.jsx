@@ -23,14 +23,14 @@ const [showDomainMenu, setShowDomainMenu] = useState(false);
 
 
   return (
-    <header className="bg-[#0077B5] text-white p-4 flex items-center justify-between relative">
+    <header className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 flex items-center justify-between relative">
       {/* Left: Logo */}
       <div className="text-2xl font-bold">
-        <Link href="/">StartupHub</Link>
+        <Link href="/">Foundora</Link>
       </div>
 
       {/* Desktop Navigation */}
-      <nav className="hidden lg:flex space-x-8 items-center">
+      <nav className="hidden lg:flex space-x-15 items-center">
         {/* Domain Selector */}
         <div className="relative group">
           <button className="px-3 py-2 hover:bg-blue-700 rounded flex items-center space-x-2">
@@ -45,7 +45,6 @@ const [showDomainMenu, setShowDomainMenu] = useState(false);
               <div>
                 <h4 className="font-semibold">Tech</h4>
                 <ul className="space-y-1 text-sm">
-           
                   <li className="hover:text-blue-600 cursor-pointer">
                     <Link href="/pages/web">Web Development</Link>
                   </li>
@@ -107,14 +106,11 @@ const [showDomainMenu, setShowDomainMenu] = useState(false);
           </div>
         </div>
 
-        <Link href="/community" className="hover:underline">
+        <Link href="/pages/community" className="hover:underline">
           Community
         </Link>
-        <Link href="/resources" className="hover:underline">
+        <Link href="/pages/resource" className="hover:underline">
           Resources
-        </Link>
-        <Link href="/library" className="hover:underline">
-          Library
         </Link>
       </nav>
 
@@ -190,7 +186,9 @@ const [showDomainMenu, setShowDomainMenu] = useState(false);
                   }`}
                 >
                   <ul className="pl-4 text-sm space-y-2">
-                    <li>Web Development</li>
+                    <li className="hover:text-blue-600 cursor-pointer">
+                      <Link href="/pages/web">Web Development</Link>
+                    </li>
                     <li>Mobile Apps</li>
                     <li>AI / ML</li>
                     <li>Blockchain</li>
@@ -279,10 +277,10 @@ const [showDomainMenu, setShowDomainMenu] = useState(false);
           )}
 
           {/* Other Links */}
-          <Link href="/community" className="font-[600] text-lg">
+          <Link href="/pages/community" className="hover:underline font-[600]">
             Community
           </Link>
-          <Link href="/resources" className="text-lg font-[600]">
+          <Link href="/pages/resource" className="hover:underline font-[600]">
             Resources
           </Link>
 

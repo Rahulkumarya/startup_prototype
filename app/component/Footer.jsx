@@ -15,10 +15,10 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Company Info */}
         <div>
-          <h2 className="text-2xl font-bold text-white mb-4">WebSolutions</h2>
+          <h2 className="text-2xl font-bold text-white mb-4">Foundora</h2>
           <p className="text-gray-400 mb-4">
-            Empowering businesses with top-notch web, mobile, and DevOps
-            solutions for a digital future.
+            Bridging new founders with expert guidance. Fueling startups through
+            real-time mentorship.
           </p>
           <div className="flex space-x-4 mt-4">
             <a
@@ -83,24 +83,20 @@ export default function Footer() {
           <ul className="space-y-2">
             <li>
               <a href="#" className="hover:text-white transition">
-                Web Development
+                Founders-Experts Connection
               </a>
             </li>
             <li>
               <a href="#" className="hover:text-white transition">
-                Mobile Apps
+               Resource library for startup insights
               </a>
             </li>
             <li>
               <a href="#" className="hover:text-white transition">
-                DevOps & Cloud
+              Community forums for peer support
               </a>
             </li>
-            <li>
-              <a href="#" className="hover:text-white transition">
-                UI/UX Design
-              </a>
-            </li>
+           
           </ul>
         </div>
 
@@ -116,8 +112,9 @@ export default function Footer() {
               placeholder="Enter your email"
               className="w-full px-4 py-2 rounded-l-lg text-black focus:outline-none"
             />
-            <button className="bg-blue-600 px-4 py-2 rounded-r-lg text-white hover:bg-blue-700 transition"
-            onClick={() => toast.success("Subscribed successfully!")}
+            <button
+              className="bg-blue-600 px-4 py-2 rounded-r-lg text-white hover:bg-blue-700 transition"
+              onClick={() => toast.success("Subscribed successfully!")}
             >
               Subscribe
             </button>
@@ -127,7 +124,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-gray-700 text-center py-4 text-gray-400">
-        © {new Date().getFullYear()} WebSolutions. All rights reserved.
+        © {new Date().getFullYear()} Foundora. All rights reserved.
       </div>
     </footer>
   );
