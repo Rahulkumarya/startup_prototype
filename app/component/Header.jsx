@@ -1,26 +1,28 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useState,useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { Bell } from "lucide-react";
 import { FaChevronDown, FaChevronUp, FaBars, FaTimes } from "react-icons/fa";
 
 export default function Header() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-const [expandedCategory, setExpandedCategory] =
- useState(null)
+  const [expandedCategory, setExpandedCategory] = useState(null);
 
-const [showDomainMenu, setShowDomainMenu] = useState(false);
-
-
+  const [showDomainMenu, setShowDomainMenu] = useState(false);
+const pathname = usePathname();
+  // Automatically close mobile menu when route changes
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [pathname]);
   // Dummy login toggle
   const handleLogin = () => setIsLoggedIn(!isLoggedIn);
 
   // Toggle category in mobile accordion
- const toggleCategory = (category) => {
-   setExpandedCategory(expandedCategory === category ? null : category);
- };
-
+  const toggleCategory = (category) => {
+    setExpandedCategory(expandedCategory === category ? null : category);
+  };
 
   return (
     <header className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 flex items-center justify-between relative">
