@@ -4,7 +4,7 @@ import { FaStar } from "react-icons/fa";
 import { useParams } from "next/navigation";
 import { useState } from "react";
 import Founders from "../../data/Founders";
-import WebDevelopment from "@/app/screen/WebDevelopment";
+import WebDevelopment from "../../../screen/WebDevelopment";
 
 export default function FounderDetails() {
   const { id } = useParams();
