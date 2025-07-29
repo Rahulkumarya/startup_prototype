@@ -4,12 +4,22 @@ export default function About() {
   return (
     <div className="bg-gray-50 text-gray-800">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16 px-6 text-center">
+      {/* <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16 px-6 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">About Us</h1>
         <p className="max-w-2xl mx-auto text-lg">
           We are passionate about building innovative digital solutions that
           empower businesses to scale and succeed in the digital era.
         </p>
+      </section> */}
+
+      <section className=" text-black py-20 px-4 text-center">
+        <div className="max-w-3xl mx-auto">
+          <p className="text-2xl md:text-5xl font-[600] mb-4">About Us</p>
+          <p className="text-lg md:text-xl opacity-90">
+            Empowering businesses with innovative digital solutions to scale and
+            thrive in the modern world.
+          </p>
+        </div>
       </section>
 
       {/* Who We Are */}

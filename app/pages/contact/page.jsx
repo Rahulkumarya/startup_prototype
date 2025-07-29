@@ -39,7 +39,7 @@ export default function ContactPage() {
           <div className="flex items-center space-x-4">
             <MapPin className="text-blue-600" />
             <span className="text-gray-700 font-medium">
-              123 Business Street, New Delhi, India
+              Munger, Bihar, India
             </span>
           </div>
         </div>
