@@ -25,12 +25,21 @@ const pathname = usePathname();
   };
 
   return (
-    <header className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 flex items-center justify-between relative">
+    <header className=" bg-gradient-to-r from-blue-600 to-purple-600 text-white p-4 flex items-center justify-between relative">
       {/* Left: Logo */}
       <div className="text-2xl font-bold">
         <Link href="/">Foundora</Link>
       </div>
-
+      {/* Left: Logo */}
+      {/* <div className="flex items-center">
+        <Link href="/">
+          <img
+            src="/assets/logo.png" // ✅ Make sure this path is correct and the image exists
+            alt="Foundora Logo"
+            className="h-10 w-auto" // Adjust height and auto width
+          />
+        </Link>
+      </div> */}
       {/* Desktop Navigation */}
       <nav className="hidden lg:flex space-x-15 items-center">
         {/* Domain Selector */}

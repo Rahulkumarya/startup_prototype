@@ -72,7 +72,7 @@ export default function About() {
       </section>
 
       {/* Team Section */}
-      <section className="max-w-7xl mx-auto py-16 px-6 text-center">
+      {/* <section className="max-w-7xl mx-auto py-16 px-6 text-center">
         <h2 className="text-3xl font-bold mb-6">Meet Our Team</h2>
         <p className="max-w-2xl mx-auto text-gray-600 mb-12">
           Our team of skilled professionals is dedicated to delivering the best
@@ -115,7 +115,7 @@ export default function About() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
