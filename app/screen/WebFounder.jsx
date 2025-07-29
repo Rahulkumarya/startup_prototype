@@ -92,7 +92,7 @@ const founders = Founders;
     <div className="bg-gray-50 min-h-screen p-6">
       {/* Top Section - Filter, Sort, Search */}
       <div className="flex flex-col md:flex-row justify-between items-center mb-6 gap-4">
-        <h1 className="text-2xl font-bold text-black">Hire a Founder</h1>
+        
 
         <div className="flex flex-wrap gap-3">
           {/* Filter Dropdown */}
