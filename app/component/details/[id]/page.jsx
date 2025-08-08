@@ -13,6 +13,11 @@ export default function FounderDetails() {
   const [mode, setMode] = useState("online");
   const [selectedTime, setSelectedTime] = useState("");
   const [price, setPrice] = useState(selectedFounder.price);
+  const [reviews, setReviews] = useState([
+    { user: "Arun", stars: 5, text: "Fantastic mentor and very helpful!" },
+    { user: "Neha", stars: 4, text: "Great session, learned a lot." },
+  ]);
+  const [newReview, setNewReview] = useState({ user: "", stars: 5, text: "" });
 
   if (!selectedFounder) return <p>Founder not found</p>;
 
@@ -33,6 +38,13 @@ export default function FounderDetails() {
     "4:00 PM - 5:00 PM",
     "6:00 PM - 7:00 PM",
   ];
+
+  const addReview = (e) => {
+    e.preventDefault();
+    if (!newReview.user || !newReview.text) return;
+    setReviews([{ ...newReview }, ...reviews]);
+    setNewReview({ user: "", stars: 5, text: "" });
+  };
 
   return (
     <div className="bg-gradient-to-br from-gray-100 to-gray-200 min-h-screen text-black">
@@ -150,6 +162,47 @@ export default function FounderDetails() {
                 ))}
               </div>
             </div>
+
+            <ul className="mt-4 space-y-3">
+              {reviews.map((r, idx) => (
+                <li key={idx} className="bg-gray-50 border rounded-lg p-4">
+                  <div className="font-medium">{r.user}</div>
+                  <div className="text-yellow-600">{"★".repeat(r.stars)}</div>
+                  <div className="text-gray-700">{r.text}</div>
+                </li>
+              ))}
+            </ul>
+
+            <form onSubmit={addReview} className="mt-4 grid gap-3">
+              <input
+                type="text"
+                placeholder="Your name"
+                value={newReview.user}
+                onChange={(e) => setNewReview({ ...newReview, user: e.target.value })}
+                className="border rounded px-3 py-2"
+              />
+              <select
+                value={newReview.stars}
+                onChange={(e) => setNewReview({ ...newReview, stars: Number(e.target.value) })}
+                className="border rounded px-3 py-2"
+              >
+                {[5, 4, 3, 2, 1].map((s) => (
+                  <option key={s} value={s}>
+                    {s} Stars
+                  </option>
+                ))}
+              </select>
+              <textarea
+                placeholder="Write your review"
+                value={newReview.text}
+                onChange={(e) => setNewReview({ ...newReview, text: e.target.value })}
+                className="border rounded px-3 py-2"
+                rows={3}
+              />
+              <button className="bg-blue-600 text-white rounded px-4 py-2 w-fit">
+                Submit Review
+              </button>
+            </form>
           </div>
         </div>
       </div>
