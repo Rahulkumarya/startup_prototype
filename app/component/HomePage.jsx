@@ -5,6 +5,9 @@ import ServicePage from "../pages/resource/page"
 import About from "../pages/about/page";
 import ContactPage from "../pages/contact/page";
 import ScrollHeader from "./AnimatedONScroll"
+import Stats from "./Stats";
+import Testimonials from "./Testimonials";
+import FAQ from "./FAQ";
 
 export default function HomePage() {
   return (
@@ -17,7 +20,16 @@ export default function HomePage() {
           <CommunitySection />
         </FadeInSection>
         <FadeInSection delay={0.1}>
+          <Stats />
+        </FadeInSection>
+        <FadeInSection delay={0.1}>
           <ServicePage />
+        </FadeInSection>
+        <FadeInSection delay={0.1}>
+          <Testimonials />
+        </FadeInSection>
+        <FadeInSection delay={0.1}>
+          <FAQ />
         </FadeInSection>
         <FadeInSection delay={0.1}>
           <About />
